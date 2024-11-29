@@ -1,15 +1,14 @@
-name: Github Actions
+name: Continuous Integration
 
-on: 
-  push:
-    branches: ["master"]
-
+on:
+   push:
+     branches: ["<Branch name>"]
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20.x]
+    build: 
+        runs-on: ubuntu-latest
+        strategy:
+            matrix: 
+                node-version: [20.x]
         steps:
         - uses: actions/checkout@v4
         - name: Use Node.js ${{ matrix.node-version }}

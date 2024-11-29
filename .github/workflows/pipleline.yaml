@@ -2,7 +2,7 @@ name: Continuous Integration
 
 on:
    push:
-     branches: ["<Branch name>"]
+     branches: ["master"]
 jobs:
     build: 
         runs-on: ubuntu-latest

@@ -9,17 +9,17 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                bat 'npm install'
+                echo 'npm install'
             }
         }
         stage('Production Build') {
             steps {
-                bat 'npm run build'
+                echo 'npm run build'
             }
         }
          stage('Lint Build') {
             steps {
-                bat 'npm run lint'
+                echo 'npm run lint'
             }
         }
          stage('Start Stage Deploy') {

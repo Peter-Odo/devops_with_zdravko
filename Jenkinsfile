@@ -2,32 +2,32 @@ pipeline {
     agent any
 
     stages {
-        stage('Start Automation Script') {
+        stage('Start Automation Script on Master') {
             steps {
                 echo 'Starting the automation script....'
             }
         }
-        stage('Install Dependencies') {
+        stage('Install Dependencies on Master') {
             steps {
-                bat 'npm install'
+                echo 'npm install'
             }
         }
-        stage('Production Build') {
+        stage('Production Build on Master') {
             steps {
-                bat 'npm run build'
+                echo 'npm run build'
             }
         }
-         stage('Lint Build') {
+         stage('Lint Build on Master') {
             steps {
-                bat 'npm run lint'
+                echo 'npm run lint'
             }
         }
-         stage('Start Stage Deploy') {
+         stage('Start Stage Deploy on Master') {
             steps {
                 echo 'Deploying to staging....'
             }
         }
-         stage('Staging Environment') {
+         stage('Staging Environment on Master') {
             steps {
                 echo 'Deployed to staging.devops.com 🎉'
             }
